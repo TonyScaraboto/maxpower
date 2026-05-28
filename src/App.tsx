@@ -1,5 +1,5 @@
 import './App.css'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -11,7 +11,7 @@ import CoveragePage from './pages/CoveragePage'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="app">
         <Navigation />
 
@@ -26,7 +26,7 @@ function App() {
         <Footer />
         <WhatsAppButton />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
