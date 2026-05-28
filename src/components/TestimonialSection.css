@@ -1,0 +1,117 @@
+.testimonial-section {
+  padding: 80px 48px;
+  background: linear-gradient(135deg, #1a3a4a 0%, #1e2d38 50%, #182530 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.testimonial-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.testimonial-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.testimonial-like {
+  position: absolute;
+  bottom: 4px;
+  right: -8px;
+  width: 44px;
+  height: 44px;
+  background: #4267b2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-like svg {
+  width: 22px;
+  height: 22px;
+}
+
+.testimonial-content {
+  padding-top: 8px;
+}
+
+.testimonial-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.testimonial-quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.testimonial-quote p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--white);
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 64px 24px;
+  }
+
+  .testimonial-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .testimonial-avatar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial-avatar img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial-like {
+    right: -4px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .testimonial-title {
+    font-size: 1.4rem;
+  }
+
+  .testimonial-quote p {
+    text-align: left;
+  }
+}

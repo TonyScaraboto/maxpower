@@ -1,0 +1,114 @@
+.products-form-section {
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.98), rgba(0, 0, 0, 1));
+  color: var(--white);
+  padding: 72px 24px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.products-form-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.products-form-text {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 520px;
+}
+
+.products-form-text h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.products-form-text p {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.products-form-fields {
+  flex: 1 1 340px;
+  min-width: 320px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.products-form-fields input,
+.products-form-fields textarea {
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+  outline: none;
+  resize: none;
+}
+
+.products-form-fields input::placeholder,
+.products-form-fields textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.products-form-fields textarea {
+  min-height: 110px;
+  max-height: 180px;
+}
+
+.products-form-fields button {
+  background: linear-gradient(135deg, var(--yellow), var(--fire-orange));
+  color: var(--bg);
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 0;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.products-form-fields button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.25);
+  filter: brightness(1.02);
+}
+
+@media (max-width: 900px) {
+  .products-form-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .products-form-text,
+  .products-form-fields {
+    max-width: 100%;
+  }
+
+  .products-form-text h1 {
+    font-size: 2.2rem;
+  }
+}

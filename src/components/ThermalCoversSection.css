@@ -1,0 +1,188 @@
+.thermal-covers-feature {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.thermal-covers-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+.thermal-covers-header {
+  padding: 80px 48px 56px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.thermal-covers-header .section-title {
+  margin-bottom: 20px;
+}
+
+.thermal-covers-header .section-subtitle {
+  margin-bottom: 0;
+}
+
+.thermal-covers-panel {
+  padding: 0 48px 80px;
+}
+
+.thermal-covers-panel-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 40px 56px;
+  align-items: center;
+  padding: 32px 40px;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+}
+
+.thermal-covers-media {
+  margin: 0;
+  flex-shrink: 0;
+  width: min(100%, 286px);
+  justify-self: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0a0a0c;
+  line-height: 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.thermal-covers-media img {
+  display: block;
+  width: 286px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 286 / 268;
+  object-fit: contain;
+  object-position: center;
+}
+
+.thermal-covers-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+}
+
+.thermal-covers-index {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+
+.thermal-covers-content h2 {
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.thermal-covers-tagline {
+  font-size: 1rem;
+  color: var(--blue-light);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.thermal-covers-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.thermal-covers-copy p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+}
+
+.thermal-covers-lead {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.thermal-covers-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+}
+
+.thermal-covers-benefits li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.thermal-covers-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .thermal-covers-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px;
+    align-items: start;
+  }
+
+  .thermal-covers-media {
+    width: min(100%, 286px);
+    justify-self: center;
+  }
+
+  .thermal-covers-media img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .thermal-covers-header {
+    padding: 56px 24px 40px;
+  }
+
+  .thermal-covers-panel {
+    padding: 0 24px 64px;
+  }
+
+  .thermal-covers-panel-inner {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .thermal-covers-media {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  .thermal-covers-benefits {
+    grid-template-columns: 1fr;
+  }
+}

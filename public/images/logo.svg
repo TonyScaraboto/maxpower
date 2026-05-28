@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Eagle Head -->
+  <g id="eagle">
+    <!-- Head -->
+    <circle cx="30" cy="25" r="12" fill="#FF6600"/>
+    
+    <!-- Left Wing -->
+    <path d="M 20 22 Q 8 18 5 25 Q 8 26 20 28" fill="#FF6600" stroke="#FF9933" stroke-width="0.5"/>
+    
+    <!-- Right Wing -->
+    <path d="M 40 22 Q 52 18 55 25 Q 52 26 40 28" fill="#FF6600" stroke="#FF9933" stroke-width="0.5"/>
+    
+    <!-- Eye -->
+    <circle cx="32" cy="23" r="2" fill="#FFF"/>
+    <circle cx="33" cy="23" r="1" fill="#000"/>
+    
+    <!-- Beak -->
+    <path d="M 40 25 L 48 24 L 40 26 Z" fill="#FFA500"/>
+  </g>
+  
+  <!-- Company Name -->
+  <text x="65" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FF6600">
+    MAXPOWER
+  </text>
+</svg>
