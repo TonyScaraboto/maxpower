@@ -10,14 +10,21 @@ export default function Footer() {
           <p>
             Advanced industrial heating solutions for excellence and reliability.
           </p>
+          <address className="footer-address">
+            <strong>MAXPOWER HEATERS USA L.L.C</strong>
+            <br />
+            5900 Balcones Dr, Ste 100
+            <br />
+            Austin, TX 78731-4298
+          </address>
         </div>
 
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><Link to="/products">Filter Screens</Link></li>
-            <li><Link to="/products">Thermal Covers</Link></li>
-            <li><Link to="/products">Air Ring Insulation</Link></li>
+            <li><Link to="/products#filter-screens">Filter Screens</Link></li>
+            <li><Link to="/products#thermal-covers">Thermal Covers</Link></li>
+            <li><Link to="/products#air-ring-insulation">Air Ring Insulation</Link></li>
           </ul>
         </div>
 
@@ -37,14 +44,25 @@ export default function Footer() {
               <a href="tel:+18174712000">+1 (817) 471-2000</a>
             </li>
             <li>
-              <a href="mailto:contact@maxpower.com">contact@maxpower.com</a>
+              <a href="mailto:sales@maxpowerindustrialheaters.com">sales@maxpowerindustrialheaters.com</a>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=5900+Balcones+Dr+Ste+100+Austin+TX+78731"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                5900 Balcones Dr, Ste 100
+                <br />
+                Austin, TX 78731-4298
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 Maxpower. All rights reserved.</p>
+        <p>&copy; 2026 MAXPOWER HEATERS USA L.L.C. All rights reserved.</p>
       </div>
     </footer>
   )

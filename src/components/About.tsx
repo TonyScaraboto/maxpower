@@ -86,7 +86,6 @@ export default function About() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-    if (!window.matchMedia('(min-width: 1024px)').matches) return
 
     const timerId = window.setInterval(goNext, 4500)
     return () => window.clearInterval(timerId)

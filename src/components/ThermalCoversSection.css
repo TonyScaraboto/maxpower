@@ -1,6 +1,7 @@
 .thermal-covers-feature {
   background: var(--bg);
   border-top: 1px solid var(--border);
+  scroll-margin-top: 90px;
 }
 
 .thermal-covers-eyebrow {

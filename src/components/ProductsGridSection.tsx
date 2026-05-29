@@ -3,6 +3,7 @@ import './ProductsGridSection.css'
 
 const products = [
   {
+    id: 'filter-screens',
     index: '01',
     name: 'Filter Screens',
     image:
@@ -11,6 +12,7 @@ const products = [
       'Improve the quality of your extrusion process with our high-performance filtration screens for screen changer systems. Essential for removing contaminants and ensuring polymer purity.',
   },
   {
+    id: 'thermal-covers-card',
     index: '02',
     name: 'Thermal Covers',
     image:
@@ -19,6 +21,7 @@ const products = [
       'Thermal blankets provide direct protection to electric heaters, increasing system efficiency and durability while preventing heat losses to the environment.',
   },
   {
+    id: 'air-ring-insulation',
     index: '03',
     name: 'Air Ring Insulation',
     image:
@@ -61,7 +64,7 @@ function ProductCard({
   const ref = useScrollReveal<HTMLElement>(0.1)
 
   return (
-    <article className={`product-card reveal ${delayClass}`} ref={ref}>
+    <article id={product.id} className={`product-card reveal ${delayClass}`} ref={ref}>
       <div className="product-card-media">
         <img src={product.image} alt={product.name} loading="lazy" />
       </div>

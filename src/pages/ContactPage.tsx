@@ -148,7 +148,7 @@ export default function ContactPage() {
         <div className="contact-map-section reveal" ref={mapRef}>
           <div className="map-header">
             <a
-              href="https://www.google.com/maps/place/Lonestar+Registered+Agent+LLC/@30.341559,-97.754955,16z"
+              href="https://www.google.com/maps/search/?api=1&query=5900+Balcones+Dr+Ste+100+Austin+TX+78731"
               target="_blank"
               rel="noopener noreferrer"
               className="map-link"
@@ -164,7 +164,7 @@ export default function ContactPage() {
           <div className="map-container">
             <iframe
               title="MaxPower Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.8547559693166!2d-97.75754338489!3d30.341558981776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cb1eca338ee1%3A0x9fccda354ff515d0!2sLonestar%20Registered%20Agent%20LLC!5e0!3m2!1spt-BR!2sbr!4v1716900000000!5m2!1spt-BR!2sbr"
+              src="https://maps.google.com/maps?q=5900%20Balcones%20Dr%20Ste%20100%20Austin%20TX%2078731&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -183,8 +183,8 @@ export default function ContactPage() {
               </div>
               <div className="map-info-card">
                 <span className="info-badge">MAXPOWER</span>
-                <span className="info-title">USA Headquarters</span>
-                <span className="info-address">Austin, TX</span>
+                <span className="info-title">MAXPOWER HEATERS USA L.L.C</span>
+                <span className="info-address">5900 Balcones Dr, Ste 100 · Austin, TX 78731-4298</span>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function ContactPage() {
           </div>
           <div className="info-text">
             <span className="label">Email</span>
-            <span className="value">contact@maxpower.com</span>
+            <span className="value">sales@maxpowerindustrialheaters.com</span>
           </div>
         </div>
 
@@ -227,6 +227,19 @@ export default function ContactPage() {
           <div className="info-text">
             <span className="label">Business Hours</span>
             <span className="value">Mon-Fri: 8AM - 6PM CST</span>
+          </div>
+        </div>
+
+        <div className="info-item">
+          <div className="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div className="info-text">
+            <span className="label">Address</span>
+            <span className="value">5900 Balcones Dr, Ste 100, Austin, TX 78731-4298</span>
           </div>
         </div>
       </div>
