@@ -1,0 +1,5 @@
+# Projeto React + TypeScript (Vite).
+# O CSS e escrito a mao por componente, mas soma mais bytes que o codigo TS,
+# fazendo o GitHub rotular o repo como "CSS". Removemos o CSS da deteccao de
+# linguagem para que a linguagem principal reflita o real: TypeScript.
+*.css linguist-detectable=false
