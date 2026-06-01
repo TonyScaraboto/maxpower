@@ -7,10 +7,11 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-section footer-brand">
           <img src="/images/logo.png" alt="Maxpower" className="footer-logo" />
-          <p>
+          <p className="footer-company-mobile">MAXPOWER HEATERS USA L.L.C</p>
+          <p className="footer-tagline">
             Advanced industrial heating solutions for excellence and reliability.
           </p>
-          <address className="footer-address">
+          <address className="footer-address footer-address--brand">
             <strong>MAXPOWER HEATERS USA L.L.C</strong>
             <br />
             5900 Balcones Dr, Ste 100
@@ -19,7 +20,7 @@ export default function Footer() {
           </address>
         </div>
 
-        <div className="footer-section">
+        <div className="footer-section footer-section--products">
           <h4>Products</h4>
           <ul>
             <li><Link to="/products#filter-screens">Filter Screens</Link></li>
@@ -31,7 +32,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer-section">
+        <div className="footer-section footer-section--company">
           <h4>Company</h4>
           <ul>
             <li><Link to="/about">About</Link></li>
@@ -40,7 +41,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer-section">
+        <div className="footer-section footer-section--contact">
           <h4>Contact</h4>
           <ul>
             <li>
@@ -65,7 +66,9 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 MAXPOWER HEATERS USA L.L.C. All rights reserved.</p>
+        <p className="footer-copyright">
+          &copy; 2026 MAXPOWER HEATERS USA L.L.C. All rights reserved.
+        </p>
       </div>
     </footer>
   )
