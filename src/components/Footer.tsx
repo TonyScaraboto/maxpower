@@ -25,6 +25,9 @@ export default function Footer() {
             <li><Link to="/products#filter-screens">Filter Screens</Link></li>
             <li><Link to="/products#thermal-covers">Thermal Covers</Link></li>
             <li><Link to="/products#air-ring-insulation">Air Ring Insulation</Link></li>
+            <li><Link to="/products#thermal-insulation-covers">Barrel Insulation Covers</Link></li>
+            <li><Link to="/products#ceramic-heaters">Ceramic Heaters</Link></li>
+            <li><Link to="/products#finned-ceramic-heaters">Finned Ceramic Heaters</Link></li>
           </ul>
         </div>
 

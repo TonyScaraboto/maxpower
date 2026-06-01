@@ -9,6 +9,7 @@ import ProductsPage from './pages/ProductsPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import CoveragePage from './pages/CoveragePage'
+import EnergySavingsPage from './pages/EnergySavingsPage'
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation()
@@ -48,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/energy-savings-results" element={<EnergySavingsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/coverage" element={<CoveragePage />} />
