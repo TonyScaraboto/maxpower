@@ -313,14 +313,17 @@
     flex: none;
     width: 100%;
     max-width: 100%;
+    height: auto;
+    overflow: visible;
   }
 
   .energy-savings-image img {
     flex: none;
+    width: 100%;
     height: auto;
-    max-height: 420px;
-    object-fit: cover;
-    object-position: center top;
+    max-height: none;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .energy-table {
@@ -373,11 +376,6 @@
 
   .energy-savings-content {
     gap: 16px;
-  }
-
-  .energy-savings-image img {
-    max-height: 320px;
-    border-radius: 8px;
   }
 
   .energy-savings-data {
@@ -493,10 +491,6 @@
   .section-label {
     font-size: 0.72rem;
     padding: 9px 10px;
-  }
-
-  .energy-savings-image img {
-    max-height: 260px;
   }
 
   .energy-savings-data {

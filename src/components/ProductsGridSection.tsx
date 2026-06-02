@@ -32,7 +32,7 @@ const products: Product[] = [
   {
     id: 'thermal-covers-card',
     index: '02',
-    name: 'Thermal Covers',
+    name: 'Thermal Blankets',
     image:
       'https://yata-apix-2930b0d1-92d6-4c93-a4ac-2db6facb6458.s3-object.locaweb.com.br/4ae96f52ba00414b84e93fa6546d09a7.jpg',
     description:
@@ -50,7 +50,7 @@ const products: Product[] = [
   {
     id: 'thermal-insulation-covers',
     index: '04',
-    name: 'Thermal Insulation Covers for Extruder Barrels and Injection Molding Machine Barrels',
+    name: 'Thermal Cover',
     image: '/images/products/thermal-insulation-covers.png',
     description:
       'Maximize the efficiency of your manufacturing operations with our Thermal Insulation Covers. Specifically engineered for extruder and injection molding machine barrels, these high-performance covers act as an effective thermal barrier, preventing heat dissipation into the surrounding environment and concentrating energy exactly where it is needed: in the polymer processing zone. By reducing heat loss, our insulation covers help improve temperature stability, lower energy consumption, enhance process efficiency, and contribute to a safer and more comfortable working environment.',

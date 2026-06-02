@@ -20,7 +20,7 @@ export default function ThermalCoversSection() {
     <section className="thermal-covers-feature" id="thermal-covers">
       <div className="thermal-covers-header reveal" ref={headerRef}>
         <span className="thermal-covers-eyebrow">Technical Solutions</span>
-        <h1 className="section-title">Thermal Covers</h1>
+        <h1 className="section-title">Thermal Blankets</h1>
         <p className="section-subtitle">
           Complete thermal management for industrial equipment — maximizing
           efficiency, stability, and operational safety.

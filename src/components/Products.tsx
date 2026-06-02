@@ -21,7 +21,7 @@ const products = [
   {
     id: 2,
     number: '02',
-    name: 'Thermal Covers',
+    name: 'Thermal Blankets',
     tagline: 'Protect heaters and retain heat where it matters most',
     description:
       'Thermal blankets provide direct protection to electric heaters, increasing system efficiency and durability. They create a barrier that retains heat, preventing losses to the environment and helping your heaters operate with greater efficiency.',

@@ -11,7 +11,7 @@ const dicas = [
     benefits: ['Stainless steel durability', 'Consistent filtration', 'Reduced process contamination'],
   },
   {
-    title: 'Thermal Covers',
+    title: 'Thermal Blankets',
     image:
       'https://yata-apix-2930b0d1-92d6-4c93-a4ac-2db6facb6458.s3-object.locaweb.com.br/4ae96f52ba00414b84e93fa6546d09a7.jpg',
     description:
