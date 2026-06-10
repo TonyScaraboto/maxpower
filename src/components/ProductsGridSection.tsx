@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import './ProductsGridSection.css'
 
@@ -17,6 +18,7 @@ type Product = {
   sectionText?: string
   featuresHeading?: string
   features?: ProductFeature[]
+  variations?: string[]
 }
 
 const products: Product[] = [
@@ -28,6 +30,14 @@ const products: Product[] = [
       'https://yata-apix-2930b0d1-92d6-4c93-a4ac-2db6facb6458.s3-object.locaweb.com.br/04da5218028a45768c25cdea7edbe0e9.png',
     description:
       'Improve the quality of your extrusion process with our high-performance filtration screens for screen changer systems. Essential for removing contaminants and ensuring polymer purity.',
+    variations: [
+      '/images/products/filter-screens/variation-1.png',
+      '/images/products/filter-screens/variation-2.png',
+      '/images/products/filter-screens/variation-3.png',
+      '/images/products/filter-screens/variation-4.png',
+      '/images/products/filter-screens/variation-5.png',
+      '/images/products/filter-screens/variation-6.png',
+    ],
   },
   {
     id: 'thermal-covers-card',
@@ -37,6 +47,14 @@ const products: Product[] = [
       'https://yata-apix-2930b0d1-92d6-4c93-a4ac-2db6facb6458.s3-object.locaweb.com.br/4ae96f52ba00414b84e93fa6546d09a7.jpg',
     description:
       'Thermal blankets provide direct protection to electric heaters, increasing system efficiency and durability while preventing heat losses to the environment.',
+    variations: [
+      '/images/products/thermal-blankets/variation-1.png',
+      '/images/products/thermal-blankets/variation-2.png',
+      '/images/products/thermal-blankets/variation-3.png',
+      '/images/products/thermal-blankets/variation-4.png',
+      '/images/products/thermal-blankets/variation-5.png',
+      '/images/products/thermal-blankets/variation-6.png',
+    ],
   },
   {
     id: 'air-ring-insulation',
@@ -46,6 +64,7 @@ const products: Product[] = [
       'https://yata-apix-2930b0d1-92d6-4c93-a4ac-2db6facb6458.s3-object.locaweb.com.br/259ba9bd1b5a4d7db386bbf58bbf2c8a.jpg',
     description:
       'Thermal insulation applied to pipelines and the air ring ensures that chilled air reaches the bubble at the ideal temperature, without losses along the way.',
+    variations: ['/images/products/air-ring-insulation/variation-1.png'],
   },
   {
     id: 'thermal-insulation-covers',
@@ -54,6 +73,14 @@ const products: Product[] = [
     image: '/images/products/thermal-insulation-covers.png',
     description:
       'Maximize the efficiency of your manufacturing operations with our Thermal Insulation Covers. Specifically engineered for extruder and injection molding machine barrels, these high-performance covers act as an effective thermal barrier, preventing heat dissipation into the surrounding environment and concentrating energy exactly where it is needed: in the polymer processing zone. By reducing heat loss, our insulation covers help improve temperature stability, lower energy consumption, enhance process efficiency, and contribute to a safer and more comfortable working environment.',
+    variations: [
+      '/images/products/thermal-cover/variation-1.png',
+      '/images/products/thermal-cover/variation-2.png',
+      '/images/products/thermal-cover/variation-3.png',
+      '/images/products/thermal-cover/variation-4.png',
+      '/images/products/thermal-cover/variation-5.png',
+      '/images/products/thermal-cover/variation-6.png',
+    ],
   },
   {
     id: 'ceramic-heaters',
@@ -82,6 +109,14 @@ const products: Product[] = [
         text: 'Reduces machine startup time while maintaining stable processing temperatures',
       },
     ],
+    variations: [
+      '/images/products/ceramic-heaters/variation-1.png',
+      '/images/products/ceramic-heaters/variation-2.png',
+      '/images/products/ceramic-heaters/variation-3.png',
+      '/images/products/ceramic-heaters/variation-4.png',
+      '/images/products/ceramic-heaters/variation-5.png',
+      '/images/products/ceramic-heaters/variation-6.png',
+    ],
   },
   {
     id: 'finned-ceramic-heaters',
@@ -108,11 +143,34 @@ const products: Product[] = [
         text: 'Heat is directed exactl',
       },
     ],
+    variations: [
+      '/images/products/finned-ceramic-heaters/variation-1.png',
+      '/images/products/finned-ceramic-heaters/variation-2.png',
+      '/images/products/finned-ceramic-heaters/variation-3.png',
+      '/images/products/finned-ceramic-heaters/variation-4.png',
+    ],
   },
 ]
 
 export default function ProductsGridSection() {
   const headerRef = useScrollReveal<HTMLDivElement>()
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+
+  useEffect(() => {
+    if (!selectedProduct) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setSelectedProduct(null)
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [selectedProduct])
 
   return (
     <section className="products-grid-section" aria-labelledby="all-products-heading">
@@ -127,26 +185,99 @@ export default function ProductsGridSection() {
 
       <div className="products-grid">
         {products.map((p, i) => (
-          <ProductCard key={p.name} product={p} delayClass={`reveal-delay-${i + 1}`} />
+          <ProductCard
+            key={p.name}
+            product={p}
+            delayClass={`reveal-delay-${i + 1}`}
+            onViewVariations={setSelectedProduct}
+          />
         ))}
       </div>
+
+      {selectedProduct?.variations && (
+        <ProductVariationsModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </section>
+  )
+}
+
+function ProductVariationsModal({
+  product,
+  onClose,
+}: {
+  product: Product
+  onClose: () => void
+}) {
+  return (
+    <div className="product-variations-modal" role="dialog" aria-modal="true" aria-labelledby="product-variations-title">
+      <button
+        type="button"
+        className="product-variations-backdrop"
+        aria-label="Close variations"
+        onClick={onClose}
+      />
+      <div className="product-variations-panel">
+        <div className="product-variations-header">
+          <div>
+            <span className="product-variations-eyebrow">Product Variations</span>
+            <h3 id="product-variations-title">{product.name}</h3>
+          </div>
+          <button type="button" className="product-variations-close" onClick={onClose} aria-label="Close">
+            ×
+          </button>
+        </div>
+
+        <div className="product-variations-grid">
+          {product.variations?.map((image, index) => (
+            <figure key={image} className="product-variation-card">
+              <div className="product-variation-media">
+                <img src={image} alt={`${product.name} variation ${index + 1}`} loading="lazy" />
+              </div>
+              <figcaption>Variation {index + 1}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
 function ProductCard({
   product,
   delayClass,
+  onViewVariations,
 }: {
   product: Product
   delayClass: string
+  onViewVariations: (product: Product) => void
 }) {
   const ref = useScrollReveal<HTMLElement>(0.1)
+  const hasVariations = Boolean(product.variations?.length)
 
   return (
     <article id={product.id} className={`product-card reveal ${delayClass}`} ref={ref}>
-      <div className="product-card-media">
+      <div
+        className={`product-card-media${hasVariations ? ' product-card-media--interactive' : ''}`}
+        onClick={hasVariations ? () => onViewVariations(product) : undefined}
+        onKeyDown={
+          hasVariations
+            ? (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  onViewVariations(product)
+                }
+              }
+            : undefined
+        }
+        role={hasVariations ? 'button' : undefined}
+        tabIndex={hasVariations ? 0 : undefined}
+        aria-label={hasVariations ? `View ${product.name} variations` : undefined}
+      >
         <img src={product.image} alt={product.name} loading="lazy" />
+        {hasVariations && <span className="product-card-media-hint">View Variations</span>}
       </div>
       <div className="product-card-body">
         <span className="product-card-index">{product.index}</span>

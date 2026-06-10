@@ -39,245 +39,196 @@
   margin: 0 auto;
 }
 
-.energy-savings-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: stretch;
-  gap: 40px;
-  min-width: 0;
+.comparison-images {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 0 4px;
 }
 
-.energy-savings-image {
-  flex: 0 0 clamp(280px, 34%, 400px);
+.comparison-image {
   display: flex;
-  border-radius: 10px;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
-.energy-savings-image img {
+.comparison-label {
+  margin: 0;
+  padding: 14px 12px;
+  text-align: center;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #000;
+}
+
+.comparison-label--without {
+  color: #ff2d2d;
+  text-shadow:
+    0 0 6px #ff2d2d,
+    0 0 12px #ff2d2d,
+    0 0 24px #ff0000,
+    0 0 48px #ff0000;
+}
+
+.comparison-label--with {
+  color: #39ff14;
+  text-shadow:
+    0 0 6px #39ff14,
+    0 0 12px #39ff14,
+    0 0 24px #00ff66,
+    0 0 48px #00ff66;
+}
+
+.comparison-image--without {
+  border: 3px solid #ff2d2d;
+  box-shadow:
+    0 0 8px rgba(255, 45, 45, 0.6),
+    0 0 20px rgba(255, 45, 45, 0.4),
+    0 0 40px rgba(255, 0, 0, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.comparison-image--with {
+  border: 3px solid #39ff14;
+  box-shadow:
+    0 0 8px rgba(57, 255, 20, 0.6),
+    0 0 20px rgba(57, 255, 20, 0.4),
+    0 0 40px rgba(0, 255, 102, 0.25),
+    0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.comparison-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  min-height: 0;
-  flex: 1;
-  display: block;
+  min-height: 280px;
   object-fit: cover;
   object-position: center center;
 }
 
-.energy-savings-data {
-  flex: 1;
-  background: #1a1a1a;
-  border-radius: 10px;
-  padding: 24px 28px;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
+.cost-summary {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 40px;
+  text-align: center;
+  color: #111;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
-.data-report {
-  color: #fff;
+.cost-summary-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  color: #111;
 }
 
-.report-header {
+.cost-line {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 12px;
   flex-wrap: wrap;
-  gap: 12px;
-}
-
-.report-date {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
-  flex-shrink: 0;
-}
-
-.report-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #fff;
-  text-align: right;
-  flex: 1;
-  min-width: 200px;
-  line-height: 1.4;
-}
-
-.report-note {
-  background: #8b0000;
-  color: #fff;
-  font-size: 0.78rem;
-  padding: 10px 14px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.table-period {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.table-subtitle {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  margin: 24px 0 12px;
-  background: #333;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-  margin-bottom: 12px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: #666 #1a1a1a;
-}
-
-.table-wrapper::-webkit-scrollbar {
-  height: 6px;
-}
-
-.table-wrapper::-webkit-scrollbar-track {
-  background: #1a1a1a;
-  border-radius: 3px;
-}
-
-.table-wrapper::-webkit-scrollbar-thumb {
-  background: #666;
-  border-radius: 3px;
-}
-
-.energy-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.7rem;
-  min-width: 0;
-  table-layout: fixed;
-}
-
-.energy-table th {
-  background: #4a4a4a;
-  color: #fff;
-  font-weight: 600;
-  padding: 9px 6px;
-  text-align: center;
-  border: 1px solid #666;
-  font-size: 0.68rem;
-  line-height: 1.3;
-  word-wrap: break-word;
-}
-
-.energy-table td {
-  background: #e8e8e8;
-  color: #000;
-  padding: 8px 6px;
-  text-align: center;
-  border: 1px solid #ccc;
-  line-height: 1.3;
-  word-wrap: break-word;
-}
-
-.energy-table .total-row td {
-  background: #d0d0d0;
-}
-
-.energy-table .highlight-value {
-  font-weight: 700;
-  color: #000;
-}
-
-.report-footer {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #333;
-  padding: 12px 16px;
-  border-radius: 4px;
-  margin-top: 16px;
-}
-
-.footer-date {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.footer-total {
-  font-size: 0.9rem;
-  color: #fff;
-}
-
-.footer-total strong {
-  margin-left: 8px;
-}
-
-.footer-total .highlight-value {
-  color: var(--yellow, #d4af37);
-}
-
-.energy-savings-section {
-  max-width: 1400px;
-  margin: 0 auto 72px;
-  padding: 0 4px;
-}
-
-.section-label {
+  justify-content: center;
+  gap: 8px 12px;
+  margin: 0 0 14px;
   font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 12px 28px;
-  border-radius: 6px;
-  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.cost-badge {
   display: inline-block;
-  max-width: 100%;
-  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
-.section-label--without {
-  background: #8b0000;
-  color: #fff;
+.cost-badge--without {
+  background: #f5d000;
+  color: #111;
 }
 
-.section-label--with {
-  background: #1a6b1a;
-  color: #fff;
+.cost-badge--with {
+  background: #2ecc71;
+  color: #111;
 }
 
-.highlight-green {
-  color: #2ecc71 !important;
+.cost-detail {
+  font-weight: 500;
 }
 
-.report-footer--savings {
-  background: #1a4a1a;
+.cost-savings-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  margin: 28px 0 20px;
+  flex-wrap: wrap;
+}
+
+.cost-savings-badge {
+  display: inline-block;
+  background: #2ecc71;
+  color: #111;
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.cost-savings-projections {
+  text-align: left;
+}
+
+.cost-savings-projections p {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cost-savings-projections p:last-child {
+  margin-bottom: 0;
+}
+
+.cost-disclaimer {
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c0392b;
 }
 
 .savings-summary {
   max-width: 800px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
 .savings-card {
-  background: linear-gradient(135deg, #1a6b1a 0%, #0d3d0d 100%);
+  background: linear-gradient(135deg, rgba(0, 40, 10, 0.95) 0%, rgba(0, 20, 5, 0.98) 100%);
+  border: 2px solid #39ff14;
   border-radius: 12px;
   padding: 32px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  box-shadow:
+    0 0 8px rgba(57, 255, 20, 0.5),
+    0 0 20px rgba(57, 255, 20, 0.35),
+    0 0 40px rgba(0, 255, 102, 0.2),
+    inset 0 0 24px rgba(57, 255, 20, 0.08);
 }
 
 .savings-label {
@@ -285,18 +236,27 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: #39ff14;
+  text-shadow:
+    0 0 6px #39ff14,
+    0 0 12px rgba(57, 255, 20, 0.6);
 }
 
 .savings-value {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #2ecc71;
+  color: #39ff14;
+  text-shadow:
+    0 0 8px #39ff14,
+    0 0 16px #39ff14,
+    0 0 32px #00ff66,
+    0 0 48px #00ff66;
 }
 
 .savings-percent {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(57, 255, 20, 0.85);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
 }
 
 @media (max-width: 1024px) {
@@ -304,31 +264,12 @@
     padding: 110px 24px 64px;
   }
 
-  .energy-savings-content {
-    flex-direction: column;
-    gap: 24px;
+  .comparison-images {
+    gap: 20px;
   }
 
-  .energy-savings-image {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    overflow: visible;
-  }
-
-  .energy-savings-image img {
-    flex: none;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: center center;
-  }
-
-  .energy-table {
-    min-width: 520px;
-    table-layout: auto;
+  .cost-summary {
+    padding: 28px 24px;
   }
 }
 
@@ -358,112 +299,63 @@
     line-height: 1.6;
   }
 
-  .energy-savings-section {
-    margin-bottom: 40px;
-    padding: 0;
-  }
-
-  .section-label {
-    display: block;
-    width: 100%;
-    font-size: 0.78rem;
-    letter-spacing: 1px;
-    padding: 10px 12px;
-    margin-bottom: 16px;
-    text-align: center;
-    line-height: 1.35;
-  }
-
-  .energy-savings-content {
+  .comparison-images {
+    grid-template-columns: 1fr;
     gap: 16px;
+    margin-bottom: 28px;
   }
 
-  .energy-savings-data {
-    padding: 12px;
-    border-radius: 6px;
+  .comparison-image img {
+    min-height: 220px;
   }
 
-  .report-header {
+  .cost-summary {
+    padding: 24px 16px;
+    margin-bottom: 28px;
+  }
+
+  .cost-summary-title {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .cost-line {
     flex-direction: column;
-    align-items: stretch;
-    text-align: center;
     gap: 6px;
-    margin-bottom: 10px;
-  }
-
-  .report-date,
-  .report-title {
-    font-size: 0.72rem;
-    line-height: 1.45;
-    word-break: break-word;
-  }
-
-  .report-note {
-    font-size: 0.72rem;
-    padding: 8px 10px;
-    margin-bottom: 14px;
-    text-align: left;
-  }
-
-  .table-period {
-    font-size: 0.75rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
     margin-bottom: 12px;
-    padding: 0 2px;
   }
 
-  .table-subtitle {
-    font-size: 0.72rem;
-    line-height: 1.4;
-    margin: 16px 0 10px;
-    padding: 8px 6px;
+  .cost-badge {
+    font-size: 0.85rem;
   }
 
-  .table-wrapper {
-    margin-left: -4px;
-    margin-right: -4px;
-    padding-bottom: 6px;
-  }
-
-  .energy-table {
-    font-size: 0.62rem;
-    min-width: 520px;
-  }
-
-  .energy-table th {
-    font-size: 0.6rem;
-    padding: 8px 5px;
-    white-space: nowrap;
-  }
-
-  .energy-table td {
-    padding: 7px 5px;
-    white-space: nowrap;
-  }
-
-  .report-footer {
+  .cost-savings-row {
     flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 10px 12px;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0 16px;
+  }
+
+  .cost-savings-badge {
+    font-size: 1.15rem;
+  }
+
+  .cost-savings-projections {
     text-align: center;
   }
 
-  .footer-date,
-  .footer-total {
-    font-size: 0.78rem;
-    line-height: 1.45;
+  .cost-savings-projections p {
+    font-size: 0.9rem;
   }
 
-  .footer-total strong {
-    margin-left: 4px;
+  .cost-disclaimer {
+    font-size: 0.82rem;
   }
 
   .savings-summary {
     grid-template-columns: 1fr;
     gap: 12px;
-    margin-top: 24px;
-    padding: 0 4px;
   }
 
   .savings-card {
@@ -488,16 +380,7 @@
     font-size: 1.05rem;
   }
 
-  .section-label {
-    font-size: 0.72rem;
-    padding: 9px 10px;
-  }
-
-  .energy-savings-data {
-    padding: 10px 8px;
-  }
-
-  .energy-table {
-    min-width: 480px;
+  .comparison-image img {
+    min-height: 180px;
   }
 }
