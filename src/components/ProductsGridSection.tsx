@@ -75,7 +75,6 @@ const products: Product[] = [
       'Maximize the efficiency of your manufacturing operations with our Thermal Insulation Covers. Specifically engineered for extruder and injection molding machine barrels, these high-performance covers act as an effective thermal barrier, preventing heat dissipation into the surrounding environment and concentrating energy exactly where it is needed: in the polymer processing zone. By reducing heat loss, our insulation covers help improve temperature stability, lower energy consumption, enhance process efficiency, and contribute to a safer and more comfortable working environment.',
     variations: [
       '/images/products/thermal-cover/variation-1.png',
-      '/images/products/thermal-cover/variation-2.png',
       '/images/products/thermal-cover/variation-3.png',
       '/images/products/thermal-cover/variation-4.png',
       '/images/products/thermal-cover/variation-5.png',
@@ -115,7 +114,8 @@ const products: Product[] = [
       '/images/products/ceramic-heaters/variation-3.png',
       '/images/products/ceramic-heaters/variation-4.png',
       '/images/products/ceramic-heaters/variation-5.png',
-      '/images/products/ceramic-heaters/variation-6.png',
+      '/images/products/finned-ceramic-heaters/variation-1.png',
+      '/images/products/thermal-cover/variation-2.png',
     ],
   },
   {
@@ -144,7 +144,6 @@ const products: Product[] = [
       },
     ],
     variations: [
-      '/images/products/finned-ceramic-heaters/variation-1.png',
       '/images/products/finned-ceramic-heaters/variation-2.png',
       '/images/products/finned-ceramic-heaters/variation-3.png',
       '/images/products/finned-ceramic-heaters/variation-4.png',
