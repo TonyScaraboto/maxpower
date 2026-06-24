@@ -35,7 +35,7 @@ export default function CoveragePage() {
       <div className="coverage-video-wrapper">
         <video
           className="coverage-video"
-          src="/images/coverage/usa-network.mp4"
+          src="/images/coverage/mapa.mp4"
           autoPlay
           loop
           muted
