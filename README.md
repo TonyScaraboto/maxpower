@@ -5,5 +5,5 @@
 Site institucional do projeto Max Power, hospedado na Vercel.
 
 ## Tech
-- HTML5 + CSS3
+- HTML5 + CSS3 + TypeScript
 - Deploy: Vercel
