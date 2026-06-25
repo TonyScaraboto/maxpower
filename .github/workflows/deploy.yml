@@ -32,8 +32,9 @@ jobs:
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
+          protocol: ftps
+          port: 21
           local-dir: ./dist/
-          server-dir: /public_html/
-          dangerous-clean-slate: false
+          server-dir: public_html/
           security: loose
           timeout: 600000
