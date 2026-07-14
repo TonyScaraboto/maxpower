@@ -15,7 +15,7 @@ export default function CTA() {
           Get in touch with our specialists to find the perfect solution for your
           industrial needs.
         </p>
-        <a href="mailto:sales@maxpowerindustrialheaters.com" className="btn btn-primary btn-large">
+        <a href="mailto:sales@maxpower.solution" className="btn btn-primary btn-large">
           Contact Us Today
         </a>
       </div>

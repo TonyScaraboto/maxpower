@@ -48,7 +48,7 @@ export default function Footer() {
               <a href="tel:+18174712000">+1 (817) 471-2000</a>
             </li>
             <li>
-              <a href="mailto:sales@maxpowerindustrialheaters.com">sales@maxpowerindustrialheaters.com</a>
+              <a href="mailto:sales@maxpower.solution">sales@maxpower.solution</a>
             </li>
             <li>
               <a

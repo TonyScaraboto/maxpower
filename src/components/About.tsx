@@ -110,13 +110,10 @@ export default function About() {
         <div className="about-video-overlay" />
         <div className="about-engineering-inner">
           <h1 id="about-engineering-title" className="about-engineering-title">
-            Expert Engineering Team: Precision in Thermal Installation
+            The Challenges We Solve
           </h1>
           <p className="about-engineering-text">
-            Our team is composed of highly selected professionals, all certified
-            in mechanics, hydraulics, and civil construction to ensure a flawless
-            installation of heat sinks. This technical rigor guarantees the
-            operational success and continuous growth of our partners.
+            Reduce energy waste • Improve operational safety • Extend equipment life • Lower Operating costs
           </p>
 
           <div className="about-carousel">
@@ -134,7 +131,7 @@ export default function About() {
                 {engineeringSlides.map((slide, index) => {
                   const offset = index - activeIndex
                   const isActive = index === activeIndex
-                  
+
                   return (
                     <figure
                       key={slide.src}

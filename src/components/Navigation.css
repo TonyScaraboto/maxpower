@@ -37,7 +37,7 @@
 }
 
 .logo-img {
-  height: 56px;
+  height: 90px;
   width: auto;
   max-width: 220px;
   object-fit: contain;
@@ -130,8 +130,8 @@
   }
 
   .logo-img {
-    height: 64px;
-    max-width: 250px;
+    height: 88px;
+    max-width: 300px;
   }
 
   .nav-menu {
@@ -151,8 +151,8 @@
   }
 
   .logo-img {
-    height: 72px;
-    max-width: 280px;
+    height: 90px;
+    max-width: 340px;
   }
 
   .nav-menu {
@@ -180,7 +180,7 @@
   }
 
   .logo-img {
-    height: 48px;
+    height: 72px;
   }
 
   .nav-menu {
@@ -236,7 +236,7 @@
   }
 
   .logo-img {
-    height: 44px;
+    height: 72px;
   }
 
   .hamburger {
@@ -279,4 +279,3 @@
     letter-spacing: 1px;
   }
 }
-

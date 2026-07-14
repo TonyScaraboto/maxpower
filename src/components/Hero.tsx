@@ -14,7 +14,7 @@ export default function Hero() {
     videoRefs.current.forEach((video, i) => {
       if (!video) return
       if (i === active) {
-        void video.play().catch(() => {})
+        void video.play().catch(() => { })
       } else {
         video.pause()
       }
@@ -47,17 +47,16 @@ export default function Hero() {
       <div className="hero-overlay-spacex" />
       <div className="hero-content-spacex" ref={contentRef}>
         <h1 className="hero-title-spacex">
-          We provide the best heat dissipation solutions for your industry.
+          Solutions built on results.
         </h1>
 
         <p className="hero-subtitle-spacex">
-          Advanced industrial heating technologies engineered to deliver efficiency,
-          safety, and consistent thermal performance.
+          Engineering solutions that reduce waste, improve efficiency, and deliver proven results.
         </p>
 
         <div className="hero-buttons-spacex">
           <Link to="/products" className="hero-btn-spacex hero-btn-primary">
-            Explore Products
+            Explore Our Solutions
           </Link>
           <Link to="/about" className="hero-btn-spacex hero-btn-secondary">
             Learn More

@@ -178,7 +178,7 @@ export default function ProductsGridSection() {
       <div className="reveal products-grid-header" ref={headerRef}>
         <span className="products-grid-eyebrow">Complete catalog</span>
         <h2 id="all-products-heading" className="section-title">
-          All Products
+          All Solutions
         </h2>
       </div>
 
@@ -264,11 +264,11 @@ function ProductCard({
         onKeyDown={
           hasVariations
             ? (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  onViewVariations(product)
-                }
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault()
+                onViewVariations(product)
               }
+            }
             : undefined
         }
         role={hasVariations ? 'button' : undefined}

@@ -213,7 +213,7 @@ export default function ContactPage() {
           </div>
           <div className="info-text">
             <span className="label">Email</span>
-            <span className="value">sales@maxpowerindustrialheaters.com</span>
+            <span className="value">sales@maxpower.solution</span>
           </div>
         </div>
 

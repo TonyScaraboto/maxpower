@@ -5,7 +5,7 @@ import './Navigation.css'
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About us' },
-  { to: '/products', label: 'Products' },
+  { to: '/products', label: 'Solutions' },
   { to: '/energy-savings-results', label: 'Energy Savings Results' },
   { to: '/coverage', label: 'Our USA Coverage' },
   { to: '/contact', label: 'Contact' },
