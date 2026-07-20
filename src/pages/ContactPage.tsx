@@ -183,7 +183,7 @@ export default function ContactPage() {
               </div>
               <div className="map-info-card">
                 <span className="info-badge">MAXPOWER</span>
-                <span className="info-title">MAXPOWER HEATERS USA L.L.C</span>
+                <span className="info-title">MAXPOWER SOLUTIONS USA L.L.C</span>
                 <span className="info-address">5900 Balcones Dr, Ste 100 · Austin, TX 78731-4298</span>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function ContactPage() {
           </div>
           <div className="info-text">
             <span className="label">Email</span>
-            <span className="value">sales@maxpower.solution</span>
+            <span className="value">sales@maxpower.solutions</span>
           </div>
         </div>
 

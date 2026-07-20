@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-section footer-brand">
           <img src="/images/logo.png" alt="Maxpower" className="footer-logo" />
-          <p className="footer-company-mobile">MAXPOWER HEATERS USA L.L.C</p>
+          <p className="footer-company-mobile">MAXPOWER SOLUTIONS USA L.L.C</p>
           <p className="footer-tagline">
             Advanced industrial heating solutions for excellence and reliability.
           </p>
           <address className="footer-address footer-address--brand">
-            <strong>MAXPOWER HEATERS USA L.L.C</strong>
+            <strong>MAXPOWER SOLUTIONS USA L.L.C</strong>
             <br />
             5900 Balcones Dr, Ste 100
             <br />
@@ -48,7 +48,7 @@ export default function Footer() {
               <a href="tel:+18174712000">+1 (817) 471-2000</a>
             </li>
             <li>
-              <a href="mailto:sales@maxpower.solution">sales@maxpower.solution</a>
+              <a href="mailto:sales@maxpower.solutions">sales@maxpower.solutions</a>
             </li>
             <li>
               <a
@@ -67,7 +67,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p className="footer-copyright">
-          &copy; 2026 MAXPOWER HEATERS USA L.L.C. All rights reserved.
+          &copy; 2026 MAXPOWER SOLUTIONS USA L.L.C. All rights reserved.
         </p>
       </div>
     </footer>
